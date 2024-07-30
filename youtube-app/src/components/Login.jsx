@@ -8,7 +8,7 @@ function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/auth/login', { username, password });
+      const response = await axios.post('http://mysql8_backend_1:8080/auth/login', { username, password });
       const token = response.data.accessToken;
       onLogin(token);
     } catch (error) {

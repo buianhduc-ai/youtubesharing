@@ -33,7 +33,7 @@ function App() {
   }
 
   const getVideos = () => {
-    axios.get("http://localhost:8080/api/videos/all")
+    axios.get("http://mysql8_backend_1:8080/api/videos/all")
       .then((res) => {
         setVideos(res.data);
       })
@@ -48,7 +48,7 @@ function App() {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    axios.post("http://localhost:8080/api/videos/post",videoData)
+    axios.post("http://mysql8_backend_1:8080/api/videos/post",videoData)
       .then((res) => {
         console.log(res.data);
       })
