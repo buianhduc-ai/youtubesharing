@@ -1,0 +1,97 @@
+.container{
+  width: 567px;
+  height: fit-content;
+  margin-left: 30px;
+}
+h3{
+  text-align: center;
+  color: blueviolet;
+}
+.searchbox{
+  width: 567px;
+  height: 40px;
+  border: 1px solid;
+  background-color: aquamarine;
+}
+.table{
+  margin-top: 15px;
+  width: 567px;
+  height: fit-content;
+  border: 1px solid;
+  text-align: center;
+  border-collapse: collapse;
+}
+tr:nth-child(even){
+  background-color: rgb(232, 114, 232);
+}
+th{
+  border: 1px solid;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: rgb(100, 100, 220);
+}
+td{
+  border: 1px solid;
+  font-size: 13px;
+  line-height: 18px;
+}
+.inputsearch{
+  border: 1px solid;
+  border-radius: 5px;
+  width: 200px;
+  height: 25px;
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: antiquewhite;
+}
+.addBtn{
+  float: right;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 15px;
+  width: 67px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: rgb(94, 230, 94);
+}
+.addeditPopup{
+  width: 300px;
+  height: 300px;
+  border: 1px solid;
+  color: aqua;
+}
+.closeBtn{
+  float: right;
+  font-size: 25px;
+  line-height: 23px;
+  margin-right: 5px;
+  color: red;
+}
+h4{
+  text-align: center;
+  margin-top: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 25px;
+}
+.popupdiv{
+  margin-left: 15px;
+}
+.popupinput{
+  border: 1px solid;
+  border-radius: 5px;
+  height: 25px;
+  width: 180px;
+  background-color: antiquewhite;
+}
+.addVideo{
+  margin-top: 15px;
+  margin-left: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: rgb(131,238,131);
+}

@@ -24,6 +24,14 @@ public class VideoServiceImpl implements VideoService {
     public VideoServiceImpl(NotificationRestController notificationRestController) {
         this.notificationRestController = notificationRestController;
     }
+    
+    @Override
+	// @Transactional
+	public List<Videos> findAll() {
+		// TODO Auto-generated method stub
+		// return accountsDAO.findAll();
+		return videosRepository.findAll();
+	}
 
     @Override
     public List<Videos> findByOwner(Users owner) {

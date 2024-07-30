@@ -2,6 +2,8 @@ package youtube.share.demo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import youtube.share.demo.entity.Users;
@@ -22,6 +24,12 @@ public class VideoRestController {
 
     @Autowired
     private UsersService usersService;
+    
+    // Export List
+ 	@GetMapping("/all")
+ 	public List<Videos> findAll() {
+ 		return videoService.findAll();
+ 	}
 
     // Endpoint to get all videos owned by the authenticated user
     @GetMapping("/my")
@@ -68,4 +76,11 @@ public class VideoRestController {
         Optional<Videos> videoOpt = videoService.findById(id);
         return videoOpt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
+    
+    @PostMapping("/post")
+	public Videos addAccount(@RequestBody Videos theVideos) {
+		//theUsers.setId(0);
+		videoService.save(theVideos);
+		return theVideos;
+	}
 }

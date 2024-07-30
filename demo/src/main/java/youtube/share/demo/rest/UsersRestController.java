@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -71,7 +73,13 @@ public class UsersRestController {
 	// Add an accounts
 	@PostMapping("/users")
 	public Users addAccount(@RequestBody Users theUsers) {
+		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		//theUsers.setId(0);
+		String passWord = theUsers.getPassWord();
+		//String password = theUsers.getPassword();
+		String encodePassWord = passwordEncoder.encode(passWord);
+		//String encodePassword = passwordEncoder.encode(password);
+		theUsers.setPassWord(encodePassWord);
 		usersService.save(theUsers);
 		return theUsers;
 	}

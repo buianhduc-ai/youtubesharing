@@ -60,6 +60,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http.authorizeRequests()
 			.antMatchers("/auth/login").permitAll()
+			.antMatchers("/api/users").permitAll()
 			.antMatchers("/api/register").permitAll()
 			.antMatchers("/api/check").permitAll()
 			.antMatchers("/api/videos/**").permitAll()

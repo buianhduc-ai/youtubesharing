@@ -8,6 +8,8 @@ import youtube.share.demo.entity.Videos;
 
 public interface VideoService {
 	
+	public List<Videos> findAll();
+	
 	List<Videos> findByOwner(Users owner);
     //void shareVideoWithUser(Videos videos, Long long1);
     List<Videos> findSharedWithUser(Users users);
