@@ -8,7 +8,7 @@ function Register({ onRegister }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/users', { userName, passWord });
+      await axios.post('http://139.180.186.162:8080/api/users', { userName, passWord });
       onRegister();
     } catch (error) {
       console.error('Registration error:', error);
