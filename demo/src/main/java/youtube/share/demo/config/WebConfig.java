@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173") // React app URL
+                        .allowedOrigins("http://139.180.186.162","http://139.180.186.162:8080") // React app URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
